@@ -38,7 +38,7 @@ except:
 driver.find_element_by_id("month_log_tab").click()
 
 rData = []
-row = driver.find_elements_by_xpath("//body[1]/div[7]/div[1]/div[3]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[3]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[1]")
+row = driver.find_elements_by_xpath("/html/body/div[7]/div[1]/div[3]/div/div[2]/div[2]/div/div[1]/div[3]/div/div[3]/div[2]/div/table/tbody/tr[1]")
 print(row)                             
 for webElement in row:
     rData.append(webElement.text)

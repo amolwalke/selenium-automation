@@ -1,0 +1,2 @@
+#########copy file from rasp to pc
+scp -r pi@192.168.4.1:/mnt/Ohm3000Data/SQL/devicemanager.db D:\sql

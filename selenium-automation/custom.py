@@ -23,6 +23,7 @@ driver.find_element_by_xpath("/html/body/div/form/div/div[7]/button/img").click(
 driver.find_element_by_xpath("/html/body/div[2]/div[2]/div[1]/button/img").click() #patients 
 
 
+
 driver.find_element_by_xpath("/html/body/div/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[3]").click() #patientclick 
 time.sleep(4)
 
@@ -73,12 +74,12 @@ for i in range(n):
     time.sleep(8)
 
 
-time.sleep(5)
+time.sleep(6)
 
 #############################evaluation page##################################
 driver.find_element_by_xpath("/html/body/div/div[4]/div[4]/button/img[2]").click()
 
-xp = ['/html/body/div/div[3]/div[1]','/html/body/div/div[3]/div[2]','/html/body/div/div[3]/div[3]','/html/body/div/div[3]/div[4]','/html/body/div/div[3]/div[5]','/html/body/div/div[3]/div[6]']
+xp = ['/html/body/div/div[31`]/div[1]','/html/body/div/div[3]/div[2]','/html/body/div/div[3]/div[3]','/html/body/div/div[3]/div[4]','/html/body/div/div[3]/div[5]','/html/body/div/div[3]/div[6]']
 count=1
 for i in xp:
     if count == n+1:

@@ -1,0 +1,77 @@
+from selenium import webdriver
+import time
+from selenium import webdriver
+import time
+import validators    # validatiors
+import selectors
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+driver = webdriver.Chrome(r"D:\New folder (2)\chromedriver.exe")
+
+driver.get("https://www.saucedemo.com/")
+
+driver.maximize_window()
+
+
+time.sleep(5)
+
+driver.implicitly_wait(10)   #command for wait every element in the code
+
+driver.find_element_by_id("user-name").send_keys("standard_user")
+
+driver.find_element_by_id("password").send_keys("secret_sauce")
+
+#assert "standard_user" in driver.user-name
+
+
+
+driver.find_element_by_id("login-button").click()
+
+if validators.url("https://www.saucedemo.com/inventory.html"):  ##validating url link
+    print("Login successfully")
+else:
+    print("invalid username or password")
+
+driver.find_element_by_xpath("//select[@class='product_sort_container']/option[text()='Price (high to low)']").click()  #select[@class="product_sort_container"]
+
+
+wait = WebDriverWait(driver,10)
+
+ele = wait.until(EC.visibility_of(driver.find_element_by_class_name("inventory_item_name")))
+
+# //tag[@attributename='value']/subtag
+driver.find_element_by_xpath("//a[@id='item_0_img_link']/img[@class='inventory_item_img']").click()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pemdas
+
+P : parenthesis ()
+E : exponential **
+multiplication
+divide
+ADD
+sub
+
+
+
+Manage commands
+implicit explicit x  done
+assert command
+dyanamic dropdown
