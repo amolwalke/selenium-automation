@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-driver = webdriver.Chrome(r"D:\New folder (2)\chromedriver.exe")
+driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
 
 #driver.get("https://app.kredily.com/login/?_ga=2.140671026.1237576302.1614748823-445720262.1614748823")
 driver.maximize_window()

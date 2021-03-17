@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 from selenium.webdriver.support.select import Select
 
-driver = webdriver.Chrome(r"D:\New folder (2)\chromedriver.exe")
+driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
 driver.get("http://127.0.0.1:5000/loginUser")
 
 driver.find_element_by_name("username").send_keys("lauserone")

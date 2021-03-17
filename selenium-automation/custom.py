@@ -7,7 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains #scrolling page
 from selenium.webdriver.support.ui import WebDriverWait   #explicit
 
 
-driver = webdriver.Chrome(r"D:\New folder (2)\chromedriver.exe")
+driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
 
 driver.get("http://127.0.0.1:5000/loginUser")
 

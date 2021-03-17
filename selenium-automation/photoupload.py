@@ -10,10 +10,11 @@ import names
 
 driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
 
-driver.get("https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro")
+driver.get("https://www.myheritage.com/deep-nostalgia")
 
 driver.maximize_window()
 driver.implicitly_wait(10)
-time.sleep(5)
-row_count=len (driver.find_elements_by_xpath("/html/body/table/tbody/tr"))
-print("no of rows",row_count)
+
+
+q=driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[3]/div/div/div/div/div[1]/div[2]/section/div[1]/div[1]/button/span/input")
+q.send_keys("D:\chromdriver\download.jpg")
