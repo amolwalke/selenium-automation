@@ -38,3 +38,4 @@ driver.find_element_by_xpath("//span[@class='a-button-inner']/input[@type='submi
 
 
 driver.find_elements_by_xpath("//div[@id=pp-eGJjX7-138]/div[@class='a-box pmts-instrument-box']/div[@class='a-box-inner a-padding-small']/div[@class='a-fixed-left-grid']/div[@class='a-fixed-left-grid-inner']/div[@class='a-fixed-left-grid-col a-col-left']").click()
+#links = driver.find_elements_by_tag_name()
