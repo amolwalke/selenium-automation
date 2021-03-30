@@ -6,6 +6,8 @@ import selectors
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains #scrolling pages
 from selenium.webdriver.support.ui import WebDriverWait   #explicit
+import pyautogui as ps
+import pymsgbox 
 
 '''
 driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
@@ -37,13 +39,13 @@ def custom_test(driver):
 
     driver.find_element_by_id("Assessmentcustom1").click()
     #assesment  
-    driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div[1]/div[1]/div/input").send_keys("45") #age
-    driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div[2]/div[1]/label[1]").click() #gender
-    driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div[1]/div[2]/div[1]/input").send_keys("50")#weight
+    driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div/div[1]/div[1]/div/input").send_keys("45") #age
+    driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div/div[1]/div[2]/div/div/label[1]").click() #gender
+    driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div/div[2]/div[1]/div/input").send_keys("50")#weight
 
     #driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div[1]/div[2]/div[2]/select").click()
     
-    driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div[2]/div[2]/div[1]/input").send_keys("160") #height
+    driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[1]/div/div[2]/div[2]/div/div/input[1]").send_keys("160") #height
     driver.find_element_by_xpath("/html/body/div/div[3]/div[3]/form/div[2]/span").click()
 
     time.sleep(3)
@@ -51,11 +53,18 @@ def custom_test(driver):
 
 
     ##############################  start test   ####################################
-    n =int(input("enter no of test :  "))
-    for i in range(n):
+    
+    a = ps.prompt("enter no of tests?","Title","test no")
+    
+    
+    print(type(a))
+    s = int(a)
+    print("Input of s",s)
+    
+    for i in range(s):
 
         time.sleep(2)
-        driver.find_element_by_xpath("/html/body/div/div[4]/div[3]/button/img[1]").click()
+        driver.find_element_by_xpath("/html/body/div/div[4]/div[2]/div[3]/button/img[1]").click()
         driver.find_element_by_xpath("/html/body/div/div[4]/div[2]/div[1]/div[1]/input").send_keys("test"+str(i+1))
         time.sleep(3)
         driver.find_element_by_xpath("/html/body/div/div[4]/div[2]/div[1]/div[3]/button").click()
@@ -84,7 +93,7 @@ def custom_test(driver):
     xp = ['/html/body/div/div[31`]/div[1]','/html/body/div/div[3]/div[2]','/html/body/div/div[3]/div[3]','/html/body/div/div[3]/div[4]','/html/body/div/div[3]/div[5]','/html/body/div/div[3]/div[6]']
     count=1
     for i in xp:
-        if count == n+1:
+        if count == s+1:
             break 
         target = driver.find_element_by_xpath(i)
         actions = ActionChains(driver)
@@ -107,7 +116,7 @@ def custom_test(driver):
 
     ###########################report generation##################################
     time.sleep(3)
-    driver.find_element_by_xpath("/html/body/div/div[4]/div[5]/button/img").click
+    driver.find_element_by_xpath("/html/body/div/div[4]/div[5]/button/img").click()
 
 
 

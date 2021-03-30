@@ -8,6 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait   #explicit
 import random ####form random integer
 import names
 import custom as cs
+import pyautogui as ps
 
 driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
 
@@ -28,32 +29,32 @@ driver.find_element_by_xpath("/html/body/div/ul/li[2]/a").click()
 
 time.sleep(2)
 
-a=driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[2]/div/div[1]/div/input")
+a=driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[1]/div[1]/div[1]/div/input")
 b=names.get_first_name()
 a.send_keys(b)
 
-t=driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[4]/div/div[1]/div/input")
+t=driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[1]/div[1]/div[2]/div/input")
 l= names.get_last_name()
 t.send_keys(l)
 
-driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[2]/div/div[2]/div/div/label[1]").click()
+driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[1]/div[2]/div[1]/div/div/label[1]").click()
 
-z=driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[2]/div/div[3]/div/input")
+z=driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[1]/div[3]/div[1]/div/input")
 x= b+l +"@gmail.com"
 z.send_keys(x)
 
 
-driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[2]/div/div[4]/div/input").send_keys("Testing")
+driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[1]/div[4]/div/div/input").send_keys("Testing")
 
 
-driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[2]/div/div[5]/label/span[2]").click()
+driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[1]/div[5]/div/div/label/span[2]").click()
 
 def random_dob_generator():
     day = str(random.randint(1, 30))
     print(day)
     month = str(random.randint(1, 12))
     print(month)
-    year = str(random.randint(1950,  2012))
+    year = str(random.randint(1960,  2012))
     print(year)
     return '{}-{}-{}'.format(day,month,year)
 
@@ -73,14 +74,14 @@ def random_phone_num_generator():
     return '{}{}{}'.format(first, second, last)
 
 contact_number = random_phone_num_generator()
-cnum = driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[4]/div/div[3]/div/input")
+cnum = driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[1]/div[3]/div[2]/div/input")
 cnum.clear()
 cnum.send_keys(str(contact_number))
 
 
-driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[5]/div[2]/span").click()
+driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/form/div/div[2]/div[2]/span").click()
 time.sleep(2)
-driver.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/form/div/div[5]/div[3]/div/div/div[3]/button[2]").click()
+driver.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/form/div/div[2]/div[3]/div/div/div[3]/button[2]").click()
 
 row_count=len (driver.find_elements_by_xpath("/html/body/div/div[2]/div[1]/div[2]/div/div/table/tbody/tr"))
 print("no of rows",row_count)
@@ -90,12 +91,14 @@ print("no of colm",cal_count)
 
 driver.find_element_by_xpath("/html/body/div/div[2]/div[1]/div[2]/div/div/table/tbody/tr[{}]/td[1]".format(row_count)).click()
 
-p =int(input("enter test no  "))
-#####  1 :step test  2:custom test   3:flash test################
-if p == 1:
+p =ps.prompt("choose a test no","Title","test no")
+print(p)
+c=int(p)
+####################  1 :step test  2:custom test   3:flash test################
+if c == 1:
     pass
-elif p == 2:
+elif c == 2:
     cs.custom_test(driver)
-elif p == 3:
+elif c == 3:
     pass
- 
+  
