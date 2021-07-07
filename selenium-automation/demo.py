@@ -5,7 +5,7 @@ import selectors
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait   #explicit
 
-driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe"")
+driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
 
 driver.get("https://www.saucedemo.com/")
 
