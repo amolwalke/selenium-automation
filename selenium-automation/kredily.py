@@ -18,7 +18,7 @@ driver.find_element_by_id("signinSubmitBtn").click()
  
 time.sleep(7)
 driver.find_element_by_id("clockInBtn").click()
-
+driver.quit()
 '''
 c= driver.find_element_by_id("tourdemo4")
 c.click()
