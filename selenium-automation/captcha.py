@@ -1,5 +1,5 @@
 from selenium import webdriver
-import pyautogui 
+import pyautogui as ps
 import pytesseract
 
 from PIL import Image
@@ -28,7 +28,7 @@ ps.click(x=717, y=560)
 
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-text = pytesseract.image_to_string(r'C:\Users\Amol\Downloads\createCaptcha.png')
+text = pytesseract.image_to_string(r'C:\Users\Amol\Downloads\Captcha.png')
 print(text)
 
 
