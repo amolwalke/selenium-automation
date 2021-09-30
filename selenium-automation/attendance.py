@@ -36,24 +36,28 @@ except:
 
 
 driver.find_element_by_id("month_log_tab").click()
+try:
 
-rData = []
-row = driver.find_elements_by_xpath("/html/body/div[7]/div[1]/div[3]/div/div[2]/div[2]/div/div[1]/div[3]/div/div[3]/div[2]/div/table/tbody/tr[1]")
-print(row)                             
-for webElement in row:
-    rData.append(webElement.text)
+    rData = []
+    row = driver.find_elements_by_xpath("/html/body/div[7]/div[1]/div[3]/div/div[2]/div[2]/div/div[1]/div[3]/div/div[3]/div[2]/div/table/tbody/tr[1]")
+    print(row)                             
+    for webElement in row:
+        rData.append(webElement.text)
 
-#length = driver.find_elements_by_xpath("//tr[@role='row']/td[@class='sorting_1']")
+    #length = driver.find_elements_by_xpath("//tr[@role='row']/td[@class='sorting_1']")
 
-print(rData[0])
+    print(rData[0])
 
 
-pData = []
-row1 = driver.find_elements_by_xpath("//tbody/tr[1]/td[9]")
-print(row1)                             
-for webElement in row1:
-    pData.append(webElement.text)
-
+    pData = []
+    row1 = driver.find_elements_by_xpath("//tbody/tr[1]/td[9]")
+    print(row1)                             
+    for webElement in row1:
+        pData.append(webElement.text)
+   
+    print(pData[0])
+    
+except:pass
 #length = driver.find_elements_by_xpath("//tr[@role='row']/td[@class='sorting_1']")
 
 ##if pData[0] == 'Leave':
@@ -65,8 +69,7 @@ for webElement in row1:
     
 
 
-print(pData[0])
-
+    
 
 
 
