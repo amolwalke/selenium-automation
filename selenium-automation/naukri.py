@@ -3,7 +3,7 @@ import time
 #import validators    # validatiors
 import selectors
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait   #explicit
+from selenium.wsebdriver.support.ui import WebDriverWait   #explicit
 from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
@@ -37,16 +37,11 @@ for i in range(row_count):
     time.sleep(2)
     driver.switch_to.window(driver.window_handles[2])
     time.sleep(5)
-    get_title = driver.title
-    print(get_title)
-
-    if get_title == "Tech Mahindra":
-        driver.close()
-    else:
-        driver.find_element_by_xpath("/html/body/div[1]/main/div[2]/div[2]/section[1]/div[1]/div[3]/div/button[2]").click()
-        time.sleep(5)
-        driver.close()
-        driver.switch_to.window(driver.window_handles[1])
+  
+    driver.find_element_by_xpath("/html/body/div[1]/main/div[2]/div[2]/section[1]/div[1]/div[3]/div/button[2]").click()
+    time.sleep(5)
+    driver.close()
+    driver.switch_to.window(driver.window_handles[1])
         
         
 
