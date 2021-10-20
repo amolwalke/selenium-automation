@@ -1,5 +1,4 @@
 import time
-
 import openpyxl
 import xlutils
 from selenium import webdriver
@@ -11,10 +10,8 @@ driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
 driver.get("http://demo.guru99.com/test/newtours/")
 driver.maximize_window()
 driver.implicitly_wait(10)
-
 #path of excel sheet
 path ='C:\\Users\\Amol\\Documents\\datadrivensheet.xlsx'
-
 df = pd.read_excel(path)
 usernames = df.iloc[:,0]
 passwords = df.iloc[:,1]
@@ -40,7 +37,8 @@ for i in range(len(usernames)):
             print("test case failed")
 
     else:
-        
+            driver.refresh()
+            
 
 
 
