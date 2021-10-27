@@ -31,17 +31,3 @@ for element1, element2 in zip_object:
     actions.perform()
    
 
-
-# for r in xp:
-#     for q in qw:    
-    
-#         if count == n+1:
-#             break 
-    
-#         source= driver.find_element_by_id(r)
-    
-#         target = driver.find_element_by_id(q)
-#         actions = ActionChains(driver)
-#         actions.drag_and_drop(source, target)
-#         actions.perform()
-
