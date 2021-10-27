@@ -1,11 +1,11 @@
 import time
 
 import openpyxl
-import xlutils
+
 from selenium import webdriver
 import pandas as pd
 
-driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
+driver = webdriver.Chrome(r"D:\backup\chromdriver\chromedriver.exe")
 
 
 driver.get("http://demo.guru99.com/test/newtours/")
@@ -39,6 +39,15 @@ for i in range(len(usernames)):
 
         else :
             print("test case failed")
+            time.sleep()
+
+
+
+
+
+
+
+        
 
 
 
