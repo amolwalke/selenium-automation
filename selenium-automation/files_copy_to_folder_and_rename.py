@@ -2,6 +2,8 @@ import time
 import os
 import shutil
 
+
+
 def copyfiles():
     path = "D:\documents"
     dir_list = os.listdir(path)
@@ -11,7 +13,7 @@ def copyfiles():
     print(a) 
     i=int(a)+1
 
-    source= 'D:\\documents'
+    source= 'D:\\fol1'
     destination = 'D:\\New_folder'
     # shutil.copy2(source,destination)
     shutil.copytree(source,destination)
@@ -36,8 +38,13 @@ def rename_file():
         print(dir_list1[j])
         vv =path1 + str(dir_list1[j])
         eee=path1 + str(count)
-        print(vv,eee)
-        os.rename(vv,eee)
+        ext = vv.split('.')[-1]  
+        print(ext)
+        qwerty = eee +'.'+ ext  
+        print(qwerty)
+        print(vv,qwerty)
+        
+        os.rename(vv,qwerty)
         count += 1
 
 
