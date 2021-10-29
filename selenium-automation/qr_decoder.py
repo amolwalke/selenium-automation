@@ -13,4 +13,8 @@ for i in result:
     driver.get(b)
     
 
+
+
+    
+
     
