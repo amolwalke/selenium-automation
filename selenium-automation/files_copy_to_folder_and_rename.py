@@ -1,7 +1,7 @@
 import time
 import os
 import shutil
-
+import shutil.copyfile
 
 
 def copyfiles():
@@ -16,7 +16,7 @@ def copyfiles():
     source= 'D:\\fol1'
     destination = 'D:\\New_folder'
     # shutil.copy2(source,destination)
-    shutil.copytree(source,destination)
+    shutil.copyfiles(source,destination)
     
 
 
@@ -52,3 +52,5 @@ def rename_file():
 
         
 rename_file()    
+
+
