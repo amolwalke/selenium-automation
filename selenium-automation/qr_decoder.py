@@ -14,5 +14,3 @@ for i in result:
     
 
     
-
-    
