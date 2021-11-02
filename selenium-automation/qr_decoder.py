@@ -11,6 +11,8 @@ for i in result:
     a = print(i.data.decode("utf-8"))
     b=str(a)
     driver.get(b)
+
+
     
 
 
