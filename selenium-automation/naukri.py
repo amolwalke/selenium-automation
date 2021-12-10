@@ -3,7 +3,7 @@ import time
 #import validators    # validatiors
 import selectors
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.wsebdriver.support.ui import WebDriverWait   #explicit
+from selenium.webdriver.support.ui import WebDriverWait   #explicit
 from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome(r"D:\chromdriver\chromedriver.exe")
